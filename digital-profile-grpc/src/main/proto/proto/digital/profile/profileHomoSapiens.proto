@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+option java_package = "tech.geekflu.proto.digital.profile";
+option java_multiple_files = true;
+
+import "proto/digital/profile/utility.proto";
+
+message DigitalProfile {
+  string idProfile = 1;
+  string name = 2;
+  string lastName = 3;
+  string surName = 4;
+  string fullName = 5;
+  int32 age = 6;
+
+  Date birthDay = 7;
+  Date expirationDate = 8;
+  Address homeAddress = 10;
+  Address birthPlace = 11;
+  BioDescription bioDescription = 12;
+
+}
+
+message MaritalStatus {
+  string id = 1;
+  bool isMarried = 2;
+  Date marriedDate = 3;
+  Date divorcedDate = 4;
+  DigitalProfile husband = 5;
+  DigitalProfile wife = 6;
+}
+
+
+message Address {
+  string address_line1 = 1; // calle principal
+  string address_line2 = 2; //num exterior e interior
+  string colony = 3;// colonia
+  string city = 4;
+  string zip = 5;
+  string state = 6;
+}
+
+message BioDescription {
+  string hairColor = 1;
+  float weight = 2;
+  float height = 3;
+  string eyeColor = 4;
+  bool isOrganDonor = 5;
+  string bloodType = 6;
+  HomoSapiensType sex = 9;
+}
+
+message DigitalProfileRequest {
+  string idProfile = 1;
+}
+
+message DigitalProfileResponse {
+  repeated DigitalProfile digitalProfiles = 1;
+}
+
+message DigitalProfileQueryRequest {
+  string name = 1;
+  string firstName = 2;
+  string lastNAme = 3;
+  Date birthDate = 4;
+}
+
+service DigitalProfileService {
+  //Unary
+  rpc findDigitalProfileById(DigitalProfileRequest) returns (DigitalProfileResponse) {};
+
+  rpc findDigitalProfilesByQuery(DigitalProfileQueryRequest) returns (DigitalProfileResponse) {};
+}
+
+
+
+

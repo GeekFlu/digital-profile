@@ -1,0 +1,5 @@
+/.gradle/
+/.idea/
+/digital-profile-domain/build/
+/digital-profile-grpc/build/
+/digital-profile-primary-port-adapters/build/
