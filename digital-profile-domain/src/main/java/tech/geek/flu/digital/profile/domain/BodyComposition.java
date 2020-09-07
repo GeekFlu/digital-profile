@@ -14,14 +14,9 @@ public class BodyComposition {
 
   private float weight;
   private float height;
-
   private BodyFat bodyFat;
   private MetricSystemEnum metricSystem;
   private BloodPressure bloodPressure;
   private LocalDateTime measurementDateTaken;
-
-  public void calculateBodyFatPercentage() {
-
-  }
 
 }

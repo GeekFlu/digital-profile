@@ -6,10 +6,12 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BodyFat {
-  private float IMC;
-  private float neckCircumference;
-  private float abdominalCircumference;
-  private float waistCircumference;
-  private float hipsCircumference;
-  private float percentageBodyFat;
+  private double IMC;
+  private double neckCircumference;
+  private double abdominalCircumference;
+  private double waistCircumference;
+  private double hipsCircumference;
+  private double percentageBodyFat;
+  private double fatMass;
+  private double leanMass;
 }
