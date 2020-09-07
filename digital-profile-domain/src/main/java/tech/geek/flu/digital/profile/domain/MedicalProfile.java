@@ -19,11 +19,11 @@ public class MedicalProfile {
   private BodyComposition currentBodyComposition;
   private List<BodyComposition> bodyCompositions;
 
-  public void calculateBodyFat(GenreEnum genre) {
+  public void calculateBodyFatPercentage(GenreEnum genre) {
 
     if (genre == GenreEnum.FEMALE) {
 
-    }else {
+    }else if(genre == GenreEnum.MALE) {
 
     }
 
