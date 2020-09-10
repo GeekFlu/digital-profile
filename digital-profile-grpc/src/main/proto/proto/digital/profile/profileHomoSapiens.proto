@@ -14,7 +14,6 @@ message DigitalProfile {
   int32 age = 6;
 
   Date birthDay = 7;
-  Date expirationDate = 8;
   Address homeAddress = 10;
   Address birthPlace = 11;
   BioDescription bioDescription = 12;

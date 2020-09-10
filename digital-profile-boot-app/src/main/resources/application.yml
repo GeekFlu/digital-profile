@@ -1,0 +1,15 @@
+spring:
+  data:
+    cassandra:
+      contact-points:
+        - 127.0.0.1
+      keyspace-name: digital_profile
+      port: 9042
+      schema-action: NONE
+      #time outs for connecting to the cluster for dev there is a local cassadnra
+      connection:
+        connect-timeout: 10s
+      request:
+        timeout: 1s
+
+
