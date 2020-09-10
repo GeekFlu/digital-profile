@@ -1,0 +1,8 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: digital_profile
+      port: 9042
+      local-datacenter: datacenter1
+      contact-points:
+        - localhost
