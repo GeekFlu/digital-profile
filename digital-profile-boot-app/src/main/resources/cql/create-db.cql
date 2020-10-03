@@ -8,20 +8,21 @@ create table digital_profile
 	ap_materno text,
 	nombre_completo text,
 	edad smallint,
-	fecha_nacimiento timestamp
+	fecha_nacimiento timestamp,
+	primary key (fecha_nacimiento, digital_profile_id)
 )
 with comment = 'This table will hold the infomation for the digital profile, the most basic information';
 
 create table profiles_by_birthdate
 (
-	birthday timestamp,
+	fecha_nacimiento timestamp,
 	digital_profile_id timeuuid,
 	ap_paterno text,
 	ap_materno text,
 	edad smallint,
 	nombre text,
 	nombre_completo text,
-	primary key (birthday, digital_profile_id)
+	primary key (fecha_nacimiento, digital_profile_id)
 )
 with comment = 'Esta tabla mantendra el registro de los perfiles por anio';
 

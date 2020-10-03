@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Builder
-public class DigitalProfileEntity {
+public class DigitalProfile {
 
   private UUID id;
   private String firstName;
