@@ -1,18 +1,17 @@
-package tech.geek.flu.digital.profile.domain;
+package tech.geek.flu.digital.profile.controller.request;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import tech.geek.flu.digital.profile.domain.*;
 import tech.geek.flu.digital.profile.domain.type.GenreEnum;
 
-import java.util.List;
 import java.util.UUID;
 
 @Getter
 @Setter
 @Builder
-public class DigitalProfile {
-
+public class DigitalProfileRequest {
   private UUID id;
   private String firstName;
   private String lastName;
@@ -20,10 +19,6 @@ public class DigitalProfile {
   private int age;
   private GenreEnum genre;
   private Address mainAddress;
-  private List<Address> otherAddresses;
-  private List<DateProfile> dateProfiles;
   private boolean isAlive;
-  private DeathProfile deathProfile;
-  private List<MaritalStatus> maritalStatuses;
-  private MedicalProfile medicalProfile;
+  private DateProfile birthDay;
 }
