@@ -1,16 +1,15 @@
 package tech.geek.flu.digital.profile.grpc;
 
 import io.grpc.stub.StreamObserver;
-import org.lognet.springboot.grpc.GRpcService;
+import net.devh.boot.grpc.server.service.GrpcService;
 import tech.geekflu.proto.digital.profile.DigitalProfileQueryRequest;
 import tech.geekflu.proto.digital.profile.DigitalProfileRequest;
 import tech.geekflu.proto.digital.profile.DigitalProfileResponse;
 import tech.geekflu.proto.digital.profile.DigitalProfileServiceGrpc;
 
-@GRpcService
+
+@GrpcService
 public class DigitalProfileGrpcServer extends DigitalProfileServiceGrpc.DigitalProfileServiceImplBase {
-
-
 
     @Override
     public void findDigitalProfileById(DigitalProfileRequest request, StreamObserver<DigitalProfileResponse> responseObserver) {

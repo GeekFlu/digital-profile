@@ -6,3 +6,8 @@ spring:
       local-datacenter: datacenter1
       contact-points:
         - localhost
+
+
+grpc:
+  server:
+    port: 6565
