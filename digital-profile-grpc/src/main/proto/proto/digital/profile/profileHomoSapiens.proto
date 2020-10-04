@@ -53,7 +53,7 @@ message DigitalProfileRequest {
   string idProfile = 1;
 }
 
-message DigitalProfileResponse {
+message DigitalProfileGrpcResponse {
   repeated DigitalProfile digitalProfiles = 1;
 }
 
@@ -66,9 +66,9 @@ message DigitalProfileQueryRequest {
 
 service DigitalProfileService {
   //Unary
-  rpc findDigitalProfileById(DigitalProfileRequest) returns (DigitalProfileResponse) {};
+  rpc findDigitalProfileById(DigitalProfileRequest) returns (DigitalProfileGrpcResponse) {};
 
-  rpc findDigitalProfilesByQuery(DigitalProfileQueryRequest) returns (DigitalProfileResponse) {};
+  rpc findDigitalProfilesByQuery(DigitalProfileQueryRequest) returns (DigitalProfileGrpcResponse) {};
 }
 
 
